@@ -8,11 +8,15 @@
       "default": true,
       "configuration": {
         "request": "launch",
-        "program": "${workspaceRoot}/${fileBasenameNoExtension}",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
         "externalConsole": false,
         "stopAtEntry": true,
         "stopOnEntry": true,
-        "MImode": "${VIMSPECTOR_MIMODE}"
+        "MImode": "${VIMSPECTOR_MIMODE}",
+        "cwd": "${workspaceRoot}",
+        "logging": {
+          "engineLogging": true
+        }
       },
       "breakpoints": {
         "exception": {
